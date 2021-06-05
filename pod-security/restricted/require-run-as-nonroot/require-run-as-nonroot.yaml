@@ -17,8 +17,12 @@ spec:
         kinds:
           - Pod
         selector:
-          matchLabels:
-            app: nfs-subdir-external-provisioner  
+          matchExpressions:
+            - key: app
+              operator: In
+              values:
+                - nfs-subdir-external-provisioner
+                - registry-ui        
     match:
       resources:
         kinds:
