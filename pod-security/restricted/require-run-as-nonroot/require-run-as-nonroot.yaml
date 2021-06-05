@@ -12,6 +12,13 @@ spec:
   validationFailureAction: audit
   rules:
   - name: check-containers
+    exclude:
+      resources:
+        kinds:
+          - Pod
+        selector:
+          matchLabels:
+            app: nfs-subdir-external-provisioner  
     match:
       resources:
         kinds:
