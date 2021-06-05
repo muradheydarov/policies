@@ -3,6 +3,7 @@ kind: ClusterPolicy
 metadata:
   name: require-run-as-non-root
   annotations:
+    pod-policies.kyverno.io/autogen-controllers: 'DaemonSet,Deployment,Job,StatefulSet,CronJob'
     policies.kyverno.io/category: Pod Security Standards (Restricted)
     policies.kyverno.io/severity: medium
     policies.kyverno.io/subject: Pod
