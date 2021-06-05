@@ -23,6 +23,7 @@ spec:
               values:
                 - nfs-subdir-external-provisioner
                 - registry-ui        
+                - docker-registry
     match:
       resources:
         kinds:
