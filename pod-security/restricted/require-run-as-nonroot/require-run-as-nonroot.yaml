@@ -27,8 +27,7 @@ spec:
             - key: app.kubernetes.io/name
               operator: In
               values:
-                - kube-state-metrics
-                - postgresql
+                - kube-state-metrics                
     match:
       resources:
         kinds:
