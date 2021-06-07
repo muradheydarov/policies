@@ -24,6 +24,10 @@ spec:
                 - nfs-subdir-external-provisioner
                 - registry-ui        
                 - docker-registry
+            - key: app.kubernetes.io/name
+              operator: In
+              values:
+                - kube-state-metrics                
     match:
       resources:
         kinds:
